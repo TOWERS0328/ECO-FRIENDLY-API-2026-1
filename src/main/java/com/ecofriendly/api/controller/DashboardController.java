@@ -1,16 +1,20 @@
 package com.ecofriendly.api.controller;
 
-import com.ecofriendly.api.dto.ApiResponse;
-import com.ecofriendly.api.dto.DashboardSummary;
-import com.ecofriendly.api.model.User;
-import com.ecofriendly.api.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.*;
-
 import java.time.Instant;
 import java.util.Arrays;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecofriendly.api.dto.common.ApiResponse;
+import com.ecofriendly.api.dto.dashboard.DashboardSummary;
+import com.ecofriendly.api.model.User;
+import com.ecofriendly.api.repository.UserRepository;
+
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/dashboard")

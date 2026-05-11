@@ -1,17 +1,22 @@
 package com.ecofriendly.api.service;
 
-import com.ecofriendly.api.dto.*;
-import com.ecofriendly.api.model.User;
-import com.ecofriendly.api.repository.UserRepository;
-import com.ecofriendly.api.security.JwtTokenProvider;
-import lombok.RequiredArgsConstructor;
+import java.time.Instant;
+
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
+import com.ecofriendly.api.dto.auth.LoginRequest;
+import com.ecofriendly.api.dto.auth.LoginResponse;
+import com.ecofriendly.api.dto.auth.RegisterRequest;
+import com.ecofriendly.api.dto.common.ApiResponse;
+import com.ecofriendly.api.model.User;
+import com.ecofriendly.api.repository.UserRepository;
+import com.ecofriendly.api.security.JwtTokenProvider;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor

@@ -1,4 +1,4 @@
-package com.ecofriendly.api.dto;
+package com.ecofriendly.api.dto.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
